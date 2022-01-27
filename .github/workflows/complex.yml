@@ -16,7 +16,7 @@ jobs:
       steps:
          - run: date 
    job4:
-      needs: {ubuntu, windows, macos}
+      needs: [job1, job2, job3]
       runs-on: macos-latest
       steps:
          - run: date 
