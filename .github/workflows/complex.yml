@@ -12,9 +12,10 @@ jobs:
    job3:
       runs-on: macos-latest
       steps:
-         - run:date 
-   job4:
-      needs:[ubuntu, windows, macos]
-      runs-on: macos-latest
+         - run: date 
+   depends:
+      needs: {ubuntu, windows, macos}
+      runs-on: windows-latest
       steps:
+         - run: date
          - run: date
