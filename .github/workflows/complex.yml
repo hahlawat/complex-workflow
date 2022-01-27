@@ -1,5 +1,7 @@
 name: Complex
+
 on: push
+
 jobs:
    job1:
       runs-on: ubuntu-latest
@@ -15,7 +17,7 @@ jobs:
          - run: date 
    job4:
       needs: {ubuntu, windows, macos}
-      runs-on: windows-latest
+      runs-on: macos-latest
       steps:
-         - run: date
+         - run: date 
       
