@@ -6,9 +6,13 @@ jobs:
        steps:
           - name: checkout code
             run: git clone https://github.com/hahlawat/complex-workflow.git
+  
+          - name: view checkedout code 
+            run: cd complex-workflow/ && ls -a
 
-          - name: add a new fle
-            run: cd complex-workflow/ && ls
+          - name: add a new file 
+            run: touch happy 
+            
 
       
           
