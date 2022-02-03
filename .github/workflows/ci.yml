@@ -1,6 +1,11 @@
 name: ci workflow
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'name of the file you wanna create'     
+        required: true
+        default: 'rishab'
 jobs: 
   build-project:
        runs-on: ubuntu-latest
