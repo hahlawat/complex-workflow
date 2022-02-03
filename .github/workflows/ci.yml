@@ -10,15 +10,18 @@ jobs:
           - name: view checkedout code 
             run: cd complex-workflow/ && ls -a
 
-          - name: add a new file 
-            run: cd complex-workflow/ && touch happy 
+          - name: create a new file 
+            run: cd complex-workflow/ && touch rishab 
+        
+          - name: Add a new file 
+            run: cd complex-workflow/ && git add rishab
 
-            git status
-            git add happy
-            git commit -m "added new file"
-            git push origin main
+          - name: Commit a new file 
+            run: cd complex-workflow/ && git commit -m "added new file"
 
-      
+          - name: Push 
+            run: cd complex-workflow/ && git push origin main
+
           
 
        
