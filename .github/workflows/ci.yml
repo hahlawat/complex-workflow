@@ -4,6 +4,10 @@ jobs:
   build-project:
        runs-on: ubuntu-latest
        steps:
+          - name: Git configure
+            run: | 
+              git config --global user.name "hahlawat" 
+              git config --global user.email "happyahlawat108@gmail.com" 
       
           - name: checkout code
             run: git clone https://ahlawat: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@github.com/hahlawat/complex-workflow.git
