@@ -22,13 +22,13 @@ jobs:
             run: cd complex-workflow/ && ls -a
 
           - name: create a new file 
-            run: cd complex-workflow/ && touch ${{github.event.input.filename}} 
+            run: cd complex-workflow/ && touch ${{github.event.inputs.filename}} 
         
           - name: Add a new file 
-            run: cd complex-workflow/ && git add ${{github.event.input.filename}}
+            run: cd complex-workflow/ && git add ${{github.event.inputs.filename}}
 
           - name: Commit a new file 
-            run: cd complex-workflow/ && git commit -m "Added file ${{github.event.input.filename}}"
+            run: cd complex-workflow/ && git commit -m "Added file ${{github.event.inputs.filename}}"
 
           - name: Push 
             run: cd complex-workflow/ && git push origin main
