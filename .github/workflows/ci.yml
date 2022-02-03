@@ -6,7 +6,7 @@ jobs:
        steps:
       
           - name: checkout code
-            run: git clone https://ahlawat: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@github.com/hahlawat/complex-workflow.git
+            run: git clone https://ahlawat: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@github.com/hahlawat/complex-workflow.git
   
           - name: view checkedout code 
             run: cd complex-workflow/ && ls -a
