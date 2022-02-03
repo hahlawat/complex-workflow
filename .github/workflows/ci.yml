@@ -5,7 +5,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
           - name: checkout code
-            run: git clone git@github.com:hahlawat/complex-workflow.git
+            run: git clone https://github.com/hahlawat/complex-workflow.git
 
           - name: add a new fle
             run: cd complex-workflow/ && ls
