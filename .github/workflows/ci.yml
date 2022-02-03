@@ -4,7 +4,11 @@ jobs:
   build-project:
        runs-on: ubuntu-latest
        steps:
-         
+          - name: Add UserName & Password 
+            run: | 
+              git config --global user.name "hahlawat" 
+              git config --global user.email "happyahlawat108@gmail.com" 
+
           - name: checkout code
             run: git clone https://github.com/hahlawat/complex-workflow.git
   
@@ -22,14 +26,3 @@ jobs:
 
           - name: Push 
             run: cd complex-workflow/ && git push origin main
-
-          - name: Add UserName & Password 
-            run: | 
-              git config --global user.name "hahlawat" 
-              git config --global user.email "happyahlawat108@gmail.com" 
-
-
-          - name: Add password 
-            run: cd complex-workflow/ && git push origin main
-
-       
