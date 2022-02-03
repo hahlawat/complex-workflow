@@ -11,8 +11,12 @@ jobs:
             run: cd complex-workflow/ && ls -a
 
           - name: add a new file 
-            run: touch happy 
-            
+            run: cd complex-workflow/ && touch happy 
+
+            git status
+            git add happy
+            git commit -m "added new file"
+            git push origin main
 
       
           
