@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       filename:
-        description: 'name of the file you wanna create'     
+        description: 'name of the file you wanna delete'     
         required: true
-        default: 'rishab'
+        default: 'happy'
 jobs: 
   build-project:
        runs-on: ubuntu-latest
@@ -21,14 +21,14 @@ jobs:
           - name: view checkedout code 
             run: cd complex-workflow/ && ls -a
 
-          - name: create a new file 
-            run: cd complex-workflow/ && touch ${{github.event.inputs.filename}} 
+          - name: delete a new file 
+            run: cd complex-workflow/ && rm ${{github.event.inputs.filename}} 
         
           - name: Add a new file 
-            run: cd complex-workflow/ && git add ${{github.event.inputs.filename}}
+            run: cd complex-workflow/ && git rm ${{github.event.inputs.filename}}
 
           - name: Commit a new file 
-            run: cd complex-workflow/ && git commit -m "Added file ${{github.event.inputs.filename}}"
+            run: cd complex-workflow/ && git commit -m "remove file ${{github.event.inputs.filename}}"
 
           - name: Push 
             run: cd complex-workflow/ && git push origin main
